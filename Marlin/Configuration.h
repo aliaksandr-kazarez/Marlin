@@ -670,9 +670,15 @@
     #define DEFAULT_Kd_LIST {  74.50,  74.50 }
   #else
     // Geeetech MK8 Extruder
-    #define DEFAULT_Kp  12.33
-    #define DEFAULT_Ki   0.51
-    #define DEFAULT_Kd  74.50
+    // #define DEFAULT_Kp  12.33
+    // #define DEFAULT_Ki   0.51
+    // #define DEFAULT_Kd  74.50
+
+    // custom installed hotend
+    #define DEFAULT_Kp 21.24
+    #define DEFAULT_Ki 1.76
+    #define DEFAULT_Kd 63.93
+
 
     // CTC MK8 Extruder
     //#define DEFAULT_Kp  19.86
@@ -1180,7 +1186,7 @@
 // #if ENABLED(PRO_B_WITH_LEADSCREW)       // M8 leadscrew version
   // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 78.74, 78.74, 400, 105 }
 // #else                                   // M8 threaded rod version
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.6, 79.7, 2560, 98 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.6, 79.7, 2560, 140 }
   // #define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,2560,93}  // MXL, Z M8=1.25, MK8
 // #endif
 
@@ -1361,7 +1367,7 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-#define BLTOUCH
+// #define BLTOUCH
 
 /**
  * MagLev V4 probe by MDD
@@ -1602,7 +1608,7 @@
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
-#define Z_MIN_PROBE_REPEATABILITY_TEST
+// #define Z_MIN_PROBE_REPEATABILITY_TEST
 
 // Before deploy/stow pause for user confirmation
 //#define PAUSE_BEFORE_DEPLOY_STOW
@@ -1903,7 +1909,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-#define AUTO_BED_LEVELING_BILINEAR
+// #define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
